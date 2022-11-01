@@ -24,7 +24,7 @@
     "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-gh-pages": "^0.5.4",
     "gulp-clean-css": "3.9.0",
     "gulp-header": "1.8.9",
