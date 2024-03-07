@@ -34,6 +34,9 @@
 
 
 
+
+
+
 </head>
 
 <body>
@@ -672,7 +675,10 @@
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
 
-        
+
+
+
+        <!-- 
             <form name="contact-form" id="myForm" action="https://formspree.io/f/mayakdje" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
@@ -684,18 +690,10 @@
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
-              <!--
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-                 -->
               <div class="form-group">
                 <label for="name">Message</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
-
-          
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message">Erro</div>
@@ -705,9 +703,36 @@
                 <button type="submit" onclick="submitForm()">Send Message</button>
               </div>
 
+            </form> -->
+            <form name="contact-form" id="form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="from_name" class="form-control" id="from_name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="email">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
+              </div>
             
-            
-            </form>
+              <div class="text-center">
+                <input type="submit" id="button" value="Send Email" >
+                <!--<button type="submit" id="button"> Send Message </button> -->
+              </div>
+
+            </form> 
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script type="text/javascript">
+              emailjs.init('0xqqKfOIJG8vwIpWD')
+            </script>
+
+
+
           </div>
 
         </div>
@@ -768,6 +793,41 @@
    return false; // Prevent page refresh
 }
     </script>
+
+<script>
+  const btn = document.getElementById('button');
+  
+document.getElementById('form')
+  .addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    btn.value = 'Sending...';
+
+    const serviceID = 'default_service';
+    const templateID = 'template_jf81o3p';
+    const from_name= document.getElementsByName('from_name');
+    const email= document.getElementsByName('email');
+    const message=document.getElementById('message');
+
+    emailjs.sendForm(serviceID, templateID,this,
+    {
+      from_name: from_name,
+      email: email
+      
+    })
+      .then(() => {
+        btn.value = 'Send Email';
+        alert('Thank you for your message.');
+        document.getElementById("form").reset();
+      }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
+  });
+
+</script>
+
+
 
 </body>
 
