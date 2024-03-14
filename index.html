@@ -675,36 +675,8 @@
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
 
-
-
-
-        <!-- 
-            <form name="contact-form" id="myForm" action="https://formspree.io/f/mayakdje" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message">Erro</div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center">
-                <button type="submit" onclick="submitForm()">Send Message</button>
-              </div>
-
-            </form> -->
-            <form name="contact-form" id="form">
+    
+            <form name="contact-form" id="myForm" role="form"  class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -721,8 +693,8 @@
               </div>
             
               <div class="text-center">
-                <input type="submit" id="button" value="Send Email" >
-                <!--<button type="submit" id="button"> Send Message </button> -->
+                <!--<input type="submit" id="button" value="Send Email" > -->
+                <button type="submit" id="button" onclick="submitForm()"> Send Message </button> 
               </div>
 
             </form> 
@@ -781,23 +753,13 @@
 
   
   <!-- Limpador-->
-  <script>
-   function submitForm() {
-   // Get the first form with the name
-   // Usually the form name is not repeated
-   // but duplicate names are possible in HTML
-   // Therefore to work around the issue, enforce the correct index
-   var frm = document.getElementsByName('contact-form')[0];
-   frm.submit(); // Submit the form
-   frm.reset();  // Reset all form data
-   return false; // Prevent page refresh
-}
-    </script>
+
 
 <script>
+  function submitForm(){
   const btn = document.getElementById('button');
   
-document.getElementById('form')
+document.getElementById('myForm')
   .addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -818,12 +780,17 @@ document.getElementById('form')
       .then(() => {
         btn.value = 'Send Email';
         alert('Thank you for your message.');
-        document.getElementById("form").reset();
+        document.getElementById("myForm").reset();
       }, (err) => {
         btn.value = 'Send Email';
         alert(JSON.stringify(err));
       });
   });
+
+ return false;
+}
+
+
 
 </script>
 
