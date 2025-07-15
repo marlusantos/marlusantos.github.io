@@ -2,7 +2,7 @@
 
 Publicado em 15 de julho de 2025
 
-# AGI: Quando Chegaremos e o que está em Jogo?
+## AGI: Quando Chegaremos e o que está em Jogo?
 
 
 A Inteligência Artificial Geral (AGI, do inglês *Artificial General Intelligence*) refere-se a sistemas capazes de realizar qualquer tarefa intelectual humana com a mesma competência e adaptabilidade. Diferentemente da IA estreita (*narrow AI*), como os modelos atuais que dominam tarefas específicas, a AGI seria um marco revolucionário, com habilidades gerais comparáveis às humanas. O contexto atual, em 2025, mostra avanços significativos em modelos de linguagem, como o Grok 3 da xAI, e em técnicas como aprendizado por reforço, mas ainda estamos distantes de uma AGI. Estimativas sobre quando alcançaremos a AGI variam: alguns especialistas, como os da DeepMind, sugerem décadas, enquanto otimistas apontam para 2030-2040, dependendo de avanços em hardware, algoritmos e compreensão da cognição humana. Os benefícios potenciais incluem soluções para problemas complexos, como mudanças climáticas e cura de doenças, mas também levantam questões éticas e econômicas profundas.
