@@ -1,0 +1,19 @@
+
+
+[
+  {
+    "slug": "nova-funcionalidade",
+    "title": "Nova funcionalidade anunciada",
+    "date": "2025-07-10",
+    "summary": "Detalhes sobre a nova funcionalidade...",
+    "image": "assets/img1.jpg"
+  },
+  {
+    "slug": "evento-importante",
+    "title": "Evento importante confirmado 0",
+    "date": "2025-07-05",
+    "summary": "Cobertura do evento...",
+    "image": "assets/img2.jpg"
+  }
+]
+

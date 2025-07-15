@@ -952,3 +952,31 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+
+.whatsapp-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #25D366; /* Cor do WhatsApp */
+  color: white;
+  width: 60px; /* Tamanho do botão */
+  height: 60px; /* Tamanho do botão */
+  border-radius: 50%; /* Bordas arredondadas */
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px; /* Distância do fundo */
+  right: 20px; /* Distância da direita */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 24px; /* Tamanho do ícone */
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E; /* Cor ao passar o mouse */
+  transform: scale(1.1); /* Efeito de zoom */
+}
+
+.whatsapp-icon {
+  font-size: 30px; /* Tamanho do ícone */
+}

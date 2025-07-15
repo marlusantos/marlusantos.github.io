@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog profissional de notícias">
+  <title>Artigos </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-md sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Artigos</h1>
+      <nav>
+        <a href="index.html" class="mr-4 text-blue-600">Início</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Última Postagem -->
+    <section id="latest-post" class="mb-12">
+      <h2 class="text-xl font-bold mb-4">Destaque</h2>
+      <div id="latest-container"></div>
+    </section>
+
+    <!-- Carrossel de Notícias -->
+    <section id="carousel" class="mb-12">
+      <h2 class="text-xl font-bold mb-4">Últimas Notícias</h2>
+      <div id="carousel-container" class="flex overflow-x-auto space-x-4"></div>
+    </section>
+
+    <!-- Lista de Notícias com Paginação -->
+    <section id="news-list">
+      <h2 class="text-xl font-bold mb-4">Todas as Notícias</h2>
+      <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+      <div id="pagination" class="mt-6 flex justify-center space-x-2"></div>
+    </section>
+  </main>
+
+  <footer class="bg-white border-t mt-12 py-6 text-center text-sm">
+    &copy; 2025 Blog Profissional. Todos os direitos reservados.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <script src="js/main.js"></script>
+</body>
+</html>

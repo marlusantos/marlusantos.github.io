@@ -1,0 +1,35 @@
+<!-- post.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Leitura de postagem do blog profissional">
+  <title>Postagem | Blog Profissional</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+  <header class="bg-white shadow-md sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Blog Profissional</h1>
+      <nav>
+        <a href="index.html" class="mr-4 text-blue-600">Início</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-8">
+    <!--<article id="post-content" class="prose max-w-none"></article>-->
+    <article id="post-content" class="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-a:hover:underline prose-ul:list-disc prose-ol:list-decimal prose-strong:font-bold"></article>
+  </main>
+
+  <footer class="bg-white border-t mt-12 py-6 text-center text-sm">
+    &copy; 2025 Blog Profissional. Todos os direitos reservados.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/postLoader.js"></script>
+ 
+</body>
+</html>
