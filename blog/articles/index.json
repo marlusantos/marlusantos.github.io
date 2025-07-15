@@ -2,17 +2,17 @@
 
 [
   {
-    "slug": "nova-funcionalidade",
-    "title": "Nova funcionalidade anunciada",
-    "date": "2025-07-10",
-    "summary": "Detalhes sobre a nova funcionalidade...",
+    "slug": "ia-artificial",
+    "title": "Inteligência Artificial é mesmo artificial?",
+    "date": "2025-07-15",
+    "summary": "Para o futuro, espera-se que a IA evolua em direção a sistemas mais robustos e adaptáveis, potencialmente aproximando-se da AGI. No entanto, isso exige um foco maior em ética, regulamentação e mitigação de vieses para garantir que os benefícios superem os riscos.",
     "image": "assets/img1.jpg"
   },
   {
-    "slug": "evento-importante",
-    "title": "Evento importante confirmado 0",
-    "date": "2025-07-05",
-    "summary": "Cobertura do evento...",
+    "slug": "AGI",
+    "title": "AGI: Quando Chegaremos e o que está em Jogo?",
+    "date": "2025-07-25",
+    "summary": "A substituição de mão de obra é uma preocupação real, especialmente para profissões sistematizáveis, mas os desenvolvedores provavelmente continuarão sendo essenciais na criação e supervisão da AGI. O futuro aponta para uma coexistência entre humanos e AGI, onde o desafio será equilibrar eficiência com valores humanos, como equidade e dignidade.",
     "image": "assets/img2.jpg"
   }
 ]
