@@ -28,18 +28,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     contentDiv.innerHTML = `<p class="text-red-600">Erro ao carregar a postagem: ${error.message}. Verifique se o arquivo /articles/${slug}.md existe.</p>`;
   }
 });
-/*
-   <script>
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get("slug");
-    const contentDiv = document.getElementById("post-content");
-
-    fetch(`articles/${slug}.md`)
-      .then(res => res.text())
-      .then(text => {
-        contentDiv.innerHTML = marked.parse(text);
-      })
-      .catch(() => {
-        contentDiv.innerHTML = '<p class="text-red-600">Postagem não encontrada.</p>';
-      });
-  </script> */
