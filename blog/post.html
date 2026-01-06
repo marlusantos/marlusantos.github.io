@@ -7,6 +7,20 @@
   <meta name="description" content="Leitura de postagem do blog profissional">
   <title>Postagem | Blog Profissional</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7C619LJ95Y"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7C619LJ95Y', {
+    anonymize_ip: true,
+    send_page_view: false
+  });
+</script>
+
+
 
   <style>
     /* Estilos personalizados para garantir formatação do Markdown */
@@ -59,6 +73,53 @@
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="js/postLoader.js"></script>
+
+  
+ <script>
+  let scrollSent = false;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const percent = scrollTop / maxScroll;
+
+    if (percent > 0.7 && !scrollSent) {
+      scrollSent = true;
+      gtag('event', 'scroll_70_blog', {
+        article_slug: slug
+      });
+    }
+  });
+</script>
+
+<script>
+  if (document.referrer && document.referrer.includes('instagram.com')) {
+
+    gtag('event', 'visit_from_instagram', {
+      article_slug: slug
+    });
+  }
+</script>
+
+<script>
+  document.addEventListener('postLoaded', (e) => {
+    const { slug, title } = e.detail;
+
+    // page_view correto por slug
+    gtag('event', 'page_view', {
+      page_title: title,
+      page_location: location.origin + '/blog/' + slug,
+      page_path: '/blog/' + slug
+    });
+
+    // evento customizado de leitura
+    gtag('event', 'view_blog_article', {
+      article_slug: slug,
+      article_title: title
+    });
+  });
+</script>
+
  
 </body>
 </html>
